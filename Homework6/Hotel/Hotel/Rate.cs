@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ex3
+namespace Hotel
 {
     class Rate
     {
-       // private decimal Amount;
-       // private string Curency;
-
         public Rate(decimal amount,string curency)
+
         {
             this.Amount = amount;
             this.Curency = curency;
         }
 
-        public decimal Amount { get; set; }
-        public string Curency { get; set; }
+        public decimal Amount{get;set;}
 
-        public string Print()
+        public string Curency { get; set;}
+
+        public void Print()
         {
-            return $"Rate is {Amount} {Curency}";
+            Console.WriteLine($"\t\t Price is {Amount} {Curency}.");
         }
     }
 }

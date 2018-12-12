@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AC8AC586-1019-4F65-9DA1-4053ECDB80E9}</ProjectGuid>
+    <ProjectGuid>{CA0C28A1-3327-4134-8B63-599908027E76}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex3</RootNamespace>
-    <AssemblyName>Ex3</AssemblyName>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
