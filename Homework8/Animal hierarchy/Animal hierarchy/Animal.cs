@@ -23,9 +23,10 @@ namespace Animal_hierarchy
 
         public abstract string GetSound();
 
-        public void Print()
+        public  void Print()
         {
             Console.WriteLine($"Animal Name: {Name} , age: {Age}, gender : {Gender}");
+
         }
     }
 }

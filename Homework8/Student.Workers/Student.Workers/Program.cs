@@ -8,12 +8,18 @@ namespace Student.Workers
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            var HumanList = new Master();
-            var listStudents = new Master();
 
             
+            var listStudents = new Master();
+            var list = new Master();
+            //var list = new Master();
+            //list.CreateStudent(new Student());
+            //list.CreateStudent(new Student()); - for method create student
+            //list.PrintStudent();
+
             listStudents.AddStudent(new Student("Mihai", "Irimia", 9));
             listStudents.AddStudent(new Student("Bogdan", "Popoi", 8));
             listStudents.AddStudent(new Student("Alexandru", "Ioan", 10));
@@ -27,8 +33,8 @@ namespace Student.Workers
 
             //listStudents.SortStudentsByGradeDescending();
             //listStudents.SortStudentsByGradeDescending();
-            
-            var listWorkers = new  Master();
+
+            var listWorkers = new Master();
             listWorkers.AddWorker(new Workers("Mihai", "Irimia", 1000, 8));
             listWorkers.AddWorker(new Workers("Bogdan", "Popoi", 1100, 6));
             listWorkers.AddWorker(new Workers("Alexandru", "Ioan", 1200, 5));
@@ -44,22 +50,9 @@ namespace Student.Workers
             //listWorkers.SortWorkersByMoneyPerHourDescending();
 
 
-            
+           
 
             Console.ReadKey();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             //Student st1 = new Student();
             ////st1.firstName = "Mihai";

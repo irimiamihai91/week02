@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Animal_hierarchy
+namespace Bank
 {
-    interface Isound
-
+    public interface ICustomer
     {
+        string Name { get; set; }
 
-        string GetSound();
-
+        void Print();
     }
-   
-    
 }

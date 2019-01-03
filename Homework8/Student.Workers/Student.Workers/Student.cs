@@ -8,6 +8,10 @@ namespace Student.Workers
 {
     class Student:Human
     {
+        public Student()
+        {
+
+        }
         public Student(string firstName, string lastName, double grade)
         {
             this.FirstName = firstName;
@@ -15,7 +19,7 @@ namespace Student.Workers
             this.Grade = grade;
 
         }
-        public double Grade { get;}
+        public double Grade { get; set; }
 
         public void Print()
         {

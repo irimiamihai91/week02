@@ -16,6 +16,7 @@ namespace Animal_hierarchy
             var listAnimals = new List<Animal>();
 
             listAnimals.Add(new Frog("Broscuta", 3, "Male"));
+            listAnimals.Add(new Frog("Broscuta", 6, "Male"));
             listAnimals.Add(new Frog("Broscuta2", 3, "Male"));
             listAnimals.Add(new Dog("Bobby", 5, "Male"));
             listAnimals.Add(new Cat("Pisi", 1, "Female"));
@@ -80,7 +81,7 @@ namespace Animal_hierarchy
 
             foreach (var animal in listAnimals)
             {
-                if (animal.GetSound() == "Croak")
+                if (animal is Frog)
                 {
                     animalAge = animalAge + animal.Age;
                     count++;

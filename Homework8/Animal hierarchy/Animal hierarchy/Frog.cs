@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animal_hierarchy
 {
-    public class Frog: Animal
+    public class Frog: Animal,Isound,IPrint
     {
         public Frog (string name, int age, string gender) : base(name,age,gender)
         {

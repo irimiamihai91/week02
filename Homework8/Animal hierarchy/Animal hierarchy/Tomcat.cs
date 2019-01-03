@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Animal_hierarchy
 {
-    class Tomcat:Cat
+    class Tomcat:Cat, Isound,IPrint
     {
         public Tomcat(string name, int age, string gender) : base(name, age, gender)
         {

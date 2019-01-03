@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Animal_hierarchy
 {
-    interface Isound
-
+    interface IPrint
     {
 
-        string GetSound();
-
+        void Print();
+       
     }
-   
-    
 }

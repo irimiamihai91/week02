@@ -20,6 +20,7 @@ namespace Student.Workers
         public void AddStudent(Student student)
         {
             this.StudentsList.Add(student);
+            
         }
 
         public void AddWorker(Workers worker)
@@ -68,23 +69,50 @@ namespace Student.Workers
             }
         }
 
-       
+        public void CreateStudent(Student st1)
+        {
 
+            Console.WriteLine("Please insert Student First Name:");
+            string studentfirstName = Console.ReadLine();
+            Console.WriteLine("Please insert Student Last Name:");   ///Second aproach : insert datas in the console
+            string studentlastName = Console.ReadLine();
+            Console.WriteLine("Please insert Student Grade:");
+            int studentgrade = Convert.ToInt32(Console.ReadLine());
+            st1.FirstName = studentfirstName;
+            st1.LastName = studentlastName;
+            st1.Grade = studentgrade;
+            StudentsList.Add(st1);
 
+            
 
-        //    //var MasterList = new List<Human>(StudentsList.Count + WorkersList.Count);
-        //    //MasterList.AddRange(StudentsList);
-        //    //MasterList.AddRange(WorkersList);
-        //    //foreach (var human in MasterList)
-        //    //{
-        //    //    Console.WriteLine($"First Name :{human.FirstName}, Last Name:{human.LastName}");
-        //    //}
-        //    //return MasterList;
         }
 
+        public void PrintStudent()
+        {
+            foreach (var student in StudentsList)
+            {
+                student.Print();
+            }
+        }
+
+
+        public void List()
+        {
+            var MasterList = new List<Human>(StudentsList.Count + WorkersList.Count);
+            MasterList.AddRange(StudentsList);
+            MasterList.AddRange(WorkersList);
+            foreach (var human in MasterList)
+            {
+                Console.WriteLine($"First Name :{human.FirstName}, Last Name:{human.LastName}");
+            }
+            
+        }
         
+    }
 
 
-    }
-    }
+
+
+}
+    
 

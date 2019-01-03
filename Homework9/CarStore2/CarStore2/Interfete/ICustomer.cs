@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Animal_hierarchy
+namespace CarStore2
 {
-    interface Isound
-
+    interface ICustomer
     {
+        string Name { get; set; }
 
-        string GetSound();
-
+        void Print();
     }
-   
-    
 }
