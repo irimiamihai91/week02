@@ -18,14 +18,11 @@ namespace Bank
             
 
         }
-
-        public CustomerType CustomerType { get; set; }
+        
 
         public override double CalculateInterestRate()
         {
-            TimeSpan noOfDays = DateTime.Now.Subtract(OpenDate);
-
-            int noOfMonths =Convert.ToInt32(noOfDays.TotalDays) / 7;
+            int noOfMonths = FindDifferenceOfDate();
 
             if (Customer is Individual && noOfMonths < 4)
             {
@@ -38,6 +35,9 @@ namespace Bank
             else
                 return InteresetRate * noOfMonths;
         }
+
+       
+
 
         //DepositMoney is the same with the one implemented in the base class so we will use that one
 

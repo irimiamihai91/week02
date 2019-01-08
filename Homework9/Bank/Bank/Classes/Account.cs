@@ -34,6 +34,13 @@ namespace Bank
             Console.WriteLine($"\tAfter verification Interest rate will be : {CalculateInterestRate() }");
         }
 
+        protected int FindDifferenceOfDate()
+        {
+            TimeSpan noOfDays = DateTime.Now.Subtract(OpenDate);
+
+            int noOfMonths = Convert.ToInt32((noOfDays.TotalDays) / 7) / 4;
+            return noOfMonths;
+        }
 
     }
 

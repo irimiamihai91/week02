@@ -20,9 +20,7 @@ namespace Bank
 
         public override double CalculateInterestRate()
         {
-            TimeSpan noOfDays = DateTime.Now.Subtract(OpenDate);
-
-            int noOfMonths = Convert.ToInt32(noOfDays.TotalDays) / 7;
+            int noOfMonths = FindDifferenceOfDate();
 
             if (Customer is Company && noOfMonths <= 12)
             {

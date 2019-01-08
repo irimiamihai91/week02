@@ -21,11 +21,9 @@ namespace Bank
         public override double CalculateInterestRate()
         {
 
-            TimeSpan noOfDays = DateTime.Now.Subtract(OpenDate);
+            int noOfMonths = FindDifferenceOfDate();
 
-            int noOfMonths = Convert.ToInt32(noOfDays.TotalDays) / 7;
-
-            return (Balance > 0 && Balance < 1000) ? 0 : InteresetRate * noOfMonths;
+            return (this.Balance > 0 && this.Balance < 1000) ? 0 : InteresetRate * noOfMonths;
 
         }
 
@@ -33,7 +31,7 @@ namespace Bank
 
         public override void WithdrawMoney(double value)
         {
-            if (Balance < value)
+            if (this.Balance < value)
             {
 
                 Console.WriteLine("You don't have enought founds for this tranzaction");
